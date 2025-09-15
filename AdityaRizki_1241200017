@@ -1,0 +1,50 @@
+bilangan = 7
+
+if (bilangan % 2 ) == 1:
+  print ("bil ganjil")
+
+# Aplikasi Kasir Diskon
+
+# Data belanja
+jumlah_barang = 3
+total_belanja = 100000  # total belanja Rp100.000
+
+# Input: apakah pakai kupon atau tidak
+pakai_kupon = input("Apakah Anda punya kupon diskon 20%? (ya/tidak): ").lower()
+
+# Hitung diskon
+if pakai_kupon == "ya":
+    diskon = 0.20 * total_belanja
+else:
+    diskon = 0
+
+# Hitung total akhir
+total_akhir = total_belanja - diskon
+
+# Cetak hasil
+print("\n===== STRUK BELANJA =====")
+print(f"Jumlah Barang : {jumlah_barang}")
+print(f"Total Belanja : Rp{total_belanja:,}")
+print(f"Diskon        : Rp{int(diskon):,}")
+print(f"Total Akhir   : Rp{int(total_akhir):,}")
+print("==========================")
+
+
+username = "aditya1234"
+password = "aditya"
+login = True
+
+count = 0
+while login:
+  input_username = input("Username:")
+  input_password = input("Password:")
+  
+  count = count + 1
+  if input_username == username and input_password == password:
+    print("Login berhasil")
+    break
+  else:
+    print("Login Gagal!, Username atau Password Salah!")
+
+    if count ==3:
+      break
